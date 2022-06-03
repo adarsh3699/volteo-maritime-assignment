@@ -17,44 +17,6 @@ const notices = [
     }
 ];
 
-const toDos = [
-    {
-        title: "Deck Log | 1200 - 1600 Watch",
-        desc: "Assigned by Wayship",
-        due: "2 hours",
-        isNear: false,
-        isDone: true
-    },
-    {
-        title: "COVID19 Health Guidelines",
-        desc: "Assigned by Technical",
-        due: "2 days",
-        isNear: true,
-        isDone: false
-    },
-    {
-        title: "Steering Check",
-        desc: "Assigned by Captain",
-        due: "2 hours",
-        isNear: false,
-        isDone: false
-    },
-    {
-        title: "ECDIS Check",
-        desc: "Assigned by Chief Officer",
-        due: "6 hours",
-        isNear: false,
-        isDone: false
-    },
-    {
-        title: "ECDIS Check",
-        desc: "Assigned by Self",
-        due: "8 hours",
-        isNear: false,
-        isDone: false
-    }
-];
-
 function Content() {
     return (
         <div id="content">
@@ -81,7 +43,6 @@ function Content() {
 
             <ToDos
                 todayDate={"Tuesday, March 2"}
-                toDos={toDos}
             />
         </div>
     )
