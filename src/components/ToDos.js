@@ -26,11 +26,12 @@ function ToDos({
         }
     ]);
 
+    //handle inputBox value
     function handleTextChange(e) {
         const value = e.target.value;
         setText(value);
     }
-    
+
     function handelCheckboxClick(index, isDone) {
         const newToDos = toDos.map(function (toDo, i) {
             return (i === index ? { ...toDo, isDone: isDone ? false : true } : toDo)
@@ -41,7 +42,7 @@ function ToDos({
     function handleSubmit(e) {
         e.preventDefault();
 
-        setToDos([ ...toDos, {title:text, isDone: false, due: "7 days"} ]);
+        setToDos([...toDos, { title: text, isDone: false, due: "7 days" }]);
         setText("");
     }
 
@@ -68,8 +69,7 @@ function ToDos({
                 </form>
                 {
                     toDos.map((item, index) => (
-                        // <div key={index} className="eachToDo" style={item.isNear ? { border: "1px solid #E95454" } : {}}>
-                         <div key={index} className={ item.isDone ? "eachToDoBorder eachToDo": "eachToDo"} style={item.isNear ? { border: "1px solid #E95454" } : {}}>
+                        <div key={index} className={item.isDone ? "eachToDoBorder eachToDo" : "eachToDo"} style={item.isNear ? { border: "1px solid #E95454" } : {}}>
                             <div className="toDoEllpsis">
                                 <img src={deleteIcon} onClick={() => handleDeleteToDoBtnClick(index)} height='20px' />
                             </div>
